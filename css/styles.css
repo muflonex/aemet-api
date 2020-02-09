@@ -6,12 +6,12 @@ body {
     padding: 0;
     background: rgb(20, 20, 20);
     color: #ffcc00;
-    font-size: 70px;
+    font-size: 64px;
     font-family: 'Bebas Neue', cursive;
     text-transform: uppercase;
 }
 p {
-    margin: 3rem auto;
+    margin: 2rem auto;
 }
 video {
     position: fixed;

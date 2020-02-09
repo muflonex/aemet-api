@@ -1,12 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
 
+
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(20, 20, 20);
+    color: #ffcc00;
+    font-size: 70px;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+}
+p {
+    margin: 3rem auto;
+}
 video {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-  }
+}
+.white {
+    color: white;
+}
 .interlace {
     position: fixed;
     width: 100vw;
@@ -15,21 +31,12 @@ video {
     opacity: 0.3;
     background: repeating-linear-gradient(#fffaf2 1px, rgb(20, 20, 20) 1px, #ffa800 2px);
 }
-body {
-    margin: 0;
-    padding: 0;
-    background: rgb(20, 20, 20);
-    color: #ffcc00;
-    font-size: 48px;
-    font-family: 'Bebas Neue', cursive;
-    text-transform: uppercase;
-}
 .controls {
     position: fixed;
     z-index: 4;
     bottom: 32px;
     left: 32px;
-    width: 400px;
+    min-width: 500px;
     background: rgba(0,0,0,0.7);
 }
 .controls::after{
@@ -63,8 +70,24 @@ body {
     box-sizing: border-box;
     padding: 32px;
 }
+.controls p span {
+    float: right;
+}
 select {
     display: none;
+}
+.select2-container {
+    background: black;
+    z-index: 5;
+    transform: translateX(-32px);
+    width: 100%;
+    bottom: 0;
+}
+.select2-container--open {
+    border: 0.5px solid #ffcc00;
+}
+.select2-container--open .selection {
+    background: brown;
 }
 .select2-selection {
     -webkit-touch-callout: none;
@@ -74,17 +97,17 @@ select {
     user-select: none;
     color: white;
     padding: 0 20px;
+    font-size: 130px;
 }
 .select2-selection:focus {
     outline: none;
 }
-.select2-container {
-    background: black;
-    z-index: 5;
-    transform: translateX(-32px);
-    width: 400px;
-    bottom: 32px;
+.select2-selection:hover {
+    background: #ffcc00;
+    color: black;
+    transition: all 0.3s ease-in-out;
 }
+
 .select2-search {
     display: none;
 }
@@ -95,11 +118,4 @@ select {
     color: white;
     transition: all 0.1s ease-in-out;
 }
-.select2-container--open {
-    border: 0.5px solid #ffcc00;
-}
-.select2-selection:hover {
-    background: #ffcc00;
-    color: black;
-    transition: all 0.3s ease-in-out;
-}
+

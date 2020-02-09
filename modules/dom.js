@@ -17,8 +17,13 @@ const crear_nodo = (dato,datos) => {
     if(dato === 'sunrise' || dato === 'sunset'){
         valor = crearFecha(datos[dato]);
     }
-    const texto = document.createTextNode(`${dato}: ${valor} `);
+    const texto = document.createTextNode(`${dato}: `);
+    const span = document.createElement("span");
+    const spanTexto = document.createTextNode(`${valor}`);
+    span.appendChild(spanTexto);
+    span.classList.add('white');
     line.appendChild(texto);
+    line.appendChild(span);
     get_id('datos').appendChild(line);
 } 
 
@@ -30,7 +35,7 @@ const limpiar = (nombre_nodo) => {
 }
 
 const modificar_select = () => {
-    $('#ciudad').select2();
+    $('#ciudad').select2({dropdownParent: $('.controls-wrapper')});
 }
 
 const cambiar_fondo = () => {

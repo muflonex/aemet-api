@@ -8,7 +8,7 @@ export default function actualizarDatos() {
             parsearJSON(this.responseText);
         }
     };
-    xhttp.open("GET", `http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=57703a7a9ab7b873a99116a3ea379748`);    
+    xhttp.open("GET", `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=57703a7a9ab7b873a99116a3ea379748`);    
     xhttp.send();
     
 }

@@ -6,7 +6,7 @@ body {
     padding: 0;
     background: rgb(20, 20, 20);
     color: #ffcc00;
-    font-size: 64px;
+    font-size: calc(24px + 32 * ((100vw - 320px) / 680));
     font-family: 'Bebas Neue', cursive;
     text-transform: uppercase;
 }
@@ -97,7 +97,7 @@ select {
     user-select: none;
     color: white;
     padding: 0 20px;
-    font-size: 130px;
+    font-size: calc(70px + 31 * ((100vw - 320px) / 680));;
 }
 .select2-selection:focus {
     outline: none;

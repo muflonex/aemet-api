@@ -83,7 +83,7 @@ select {
     width: 100%;
     bottom: 0;
 }
-.select2-container--open {
+.select2-container--open:not(.select2-container--below) {
     border: 0.5px solid #ffcc00;
 }
 .select2-container--open .selection {
